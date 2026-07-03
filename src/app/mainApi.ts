@@ -7,9 +7,9 @@ import type { RootState } from "./store";
 // export const baseUrl = 'http://localhost:5000/api';
 
 
-export const base = 'https://blog-backened-5gwq.onrender.com';
+export const base = 'https://blog-backened-production-a67d.up.railway.app';
 
-export const baseUrl = 'https://blog-backened-5gwq.onrender.com/api';
+export const baseUrl = 'https://blog-backened-production-a67d.up.railway.app/api';
 
 export const mainApi = createApi({
   reducerPath: 'mainApi',
