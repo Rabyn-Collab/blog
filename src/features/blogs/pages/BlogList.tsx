@@ -88,7 +88,6 @@ export default function BlogList() {
       <Tabs
         value={selectedCategory.toLowerCase()}
         onValueChange={(value) => {
-          console.log('hello jee');
           const category = categories.find(
             (c) => c.toLowerCase() === value
           )!;
@@ -101,17 +100,19 @@ export default function BlogList() {
       >
 
         <div className="w-full overflow-x-auto py-5">
-          <TabsList className="inline-flex min-w-max gap-10 bg-transparent">
-            {categories.map((category) => (
-              <TabsTrigger
-                key={category}
-                value={category.toLowerCase()}
-                className="whitespace-nowrap"
-              >
-                {category}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+          <div className="flex justify-start md:justify-center">
+            <TabsList className="flex w-max gap-10 bg-transparent">
+              {categories.map((category) => (
+                <TabsTrigger
+                  key={category}
+                  value={category.toLowerCase()}
+                  className="flex-none whitespace-nowrap"
+                >
+                  {category}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </div>
         </div>
 
         <TabsContent
