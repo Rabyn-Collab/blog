@@ -41,7 +41,7 @@ function LoginPage() {
   }
 
   return (
-    <div className="mx-auto max-w-md w-full mt-30">
+    <div className="mx-auto max-w-md w-full mt-20 lg:mb-0 mb-20">
       <Card className="w-full sm:max-w-md">
         <CardHeader>
           <CardTitle>Log In</CardTitle>

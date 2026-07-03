@@ -57,7 +57,7 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="mx-auto max-w-md w-full mt-20">
+    <div className="mx-auto max-w-md w-full mt-20 lg:mb-0 mb-20">
       <Card className="w-full sm:max-w-md">
         <CardHeader>
           <CardTitle>Sign up</CardTitle>
