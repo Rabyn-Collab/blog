@@ -11,7 +11,7 @@ createRoot(document.getElementById('root')!).render(
   <Provider store={store}>
     <ThemeProvider
       attribute="class"
-      defaultTheme="system"
+      defaultTheme="light"
       enableSystem
       disableTransitionOnChange
     >
