@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { AlertCircle, RefreshCw } from "lucide-react";
 
 export default function EditBlog() {
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>();
 
   const { data, isLoading, error, refetch } = useGetBlogByIdQuery(id);
 

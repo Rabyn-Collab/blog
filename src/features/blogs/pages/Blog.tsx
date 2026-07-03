@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import { useGetBlogByIdQuery } from "../blogApi";
 
 export default function Blog() {
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>();
 
   const { data, isLoading, error } = useGetBlogByIdQuery(id!);
 
