@@ -13,7 +13,7 @@ const ACCEPTED_IMAGE_TYPES = [
 export const updateblogSchema = z.object({
   title: z.string().min(10, "Title must be at least 10 characters").max(100, "Title must be at most 100 characters"),
   subtitle: z.string().min(10, "Subtitle must be at least 10 characters").max(100, "Subtitle must be at most 100 characters"),
-  description: z.string().min(15, "Description must be at least 15 characters").max(500, "Description must be at most 500 characters"),
+  description: z.string().min(15, "Description must be at least 15 characters"),
   category: z
     .string()
     .refine((value): value is (typeof categories)[number] => categories.includes(value), {
