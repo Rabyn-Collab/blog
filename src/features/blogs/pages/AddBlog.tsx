@@ -25,8 +25,10 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrig
 import { useCreateBlogMutation } from "../blogApi";
 import { toast } from "sonner";
 import { handleApiError } from "@/lib/error";
+import { useNavigate } from "react-router-dom";
 
 export default function AddBlog() {
+  const nav = useNavigate();
   const form = useForm<BlogSchema>({
     resolver: zodResolver(blogSchema),
     defaultValues: {
@@ -54,6 +56,7 @@ export default function AddBlog() {
     try {
       await createBlog(formData).unwrap();
       toast.success("Blog created successfully");
+      nav(-1);
     } catch (error) {
       toast.error(handleApiError(error));
     }
