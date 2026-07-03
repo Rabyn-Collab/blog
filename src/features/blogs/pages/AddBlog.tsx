@@ -33,7 +33,7 @@ export default function AddBlog() {
       title: "",
       subtitle: "",
       description: "",
-      image: null,
+      image: undefined,
       category: "",
     },
   });

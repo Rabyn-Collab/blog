@@ -1,14 +1,15 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import EditBlogForm from "../components/EditBlogForm";
 import { useGetBlogByIdQuery } from "@/features/blogs/blogApi";
 import Loader from "@/components/Loader";
 import { Button } from "@/components/ui/button";
-import { AlertCircle, RefreshCw } from "lucide-react";
+import { AlertCircle, ArrowLeft, FileSearch, RefreshCw } from "lucide-react";
+import { skipToken } from "@reduxjs/toolkit/query";
 
 export default function EditBlog() {
   const { id } = useParams<{ id: string }>();
 
-  const { data, isLoading, error, refetch } = useGetBlogByIdQuery(id);
+  const { data, isLoading, error, refetch } = useGetBlogByIdQuery(id ?? skipToken);
 
   if (isLoading) {
     return <Loader />;
@@ -35,6 +36,36 @@ export default function EditBlog() {
             <RefreshCw className="mr-2 h-4 w-4" />
             Try Again
           </Button>
+        </div>
+      </div>
+    );
+  }
+
+  if (!data) {
+    return (
+      <div className="flex min-h-[60vh] items-center justify-center px-4">
+        <div className="w-full max-w-md rounded-xl border bg-card p-8 text-center shadow-sm">
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-muted">
+            <FileSearch className="h-7 w-7 text-muted-foreground" />
+          </div>
+
+          <h2 className="text-xl font-semibold tracking-tight">
+            Blog not found
+          </h2>
+
+          <p className="mt-2 text-sm text-muted-foreground">
+            The blog you're looking for doesn't exist, may have been deleted,
+            or the link is invalid.
+          </p>
+
+          <div className="mt-6">
+            <Button asChild className="w-full">
+              <Link to="/">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Back to My Blogs
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     );

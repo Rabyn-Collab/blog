@@ -1,7 +1,7 @@
 import { base } from "@/app/mainApi";
-import type { Blog } from "../blogApi";
 import { useNavigate } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import type { Blog } from "../schemas";
 
 const BlogCard = ({
   _id,
