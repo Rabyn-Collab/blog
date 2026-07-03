@@ -2,9 +2,14 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { RootState } from "./store";
 
 
-export const base = 'http://localhost:5000';
+// export const base = 'http://localhost:5000';
 
-export const baseUrl = 'http://localhost:5000/api';
+// export const baseUrl = 'http://localhost:5000/api';
+
+
+export const base = 'https://blog-backened-5gwq.onrender.com';
+
+export const baseUrl = 'https://blog-backened-5gwq.onrender.com/api';
 
 export const mainApi = createApi({
   reducerPath: 'mainApi',
