@@ -72,7 +72,7 @@ export default function Blog() {
       </section>
 
       {/* Content */}
-      <section className="px-5">
+      <section className="px-5 mt-10">
         <div
           className="ql-editor  prose prose-sm sm:prose-base lg:prose-lg max-w-none
       prose-headings:font-bold
