@@ -30,7 +30,7 @@ export default function Blog() {
   return (
     <article className="pb-20">
       {/* Hero */}
-      <section className="mx-auto max-w-5xl px-5 pt-14 text-center">
+      <section className="mx-auto max-w-5xl  px-5 pt-14 text-center">
         <span className="inline-flex rounded-full bg-primary/10 px-4 py-1 text-sm font-medium text-yellow-700">
           {data.category}
         </span>
@@ -72,7 +72,7 @@ export default function Blog() {
       </section>
 
       {/* Content */}
-      <section className="px-5 mt-10">
+      <section className="sm:px-5 mt-10">
         <div
           className="ql-editor  prose prose-sm sm:prose-base lg:prose-lg max-w-none
       prose-headings:font-bold
