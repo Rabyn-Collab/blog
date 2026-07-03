@@ -100,18 +100,19 @@ export default function BlogList() {
         className="space-y-4"
       >
 
-        <div className="overflow-auto py-5 mx-auto">
-          <TabsList className="flex gap-10 bg-transparent ">
-
+        <div className="w-full overflow-x-auto py-5">
+          <TabsList className="inline-flex min-w-max gap-10 bg-transparent">
             {categories.map((category) => (
-              <TabsTrigger key={category} value={category.toLowerCase()}>
+              <TabsTrigger
+                key={category}
+                value={category.toLowerCase()}
+                className="whitespace-nowrap"
+              >
                 {category}
               </TabsTrigger>
             ))}
-
           </TabsList>
         </div>
-
 
         <TabsContent
           value={selectedCategory.toLowerCase()}
