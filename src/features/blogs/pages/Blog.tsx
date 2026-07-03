@@ -72,21 +72,9 @@ export default function Blog() {
       </section>
 
       {/* Content */}
-      <section className="mx-auto mt-16 max-w-3xl px-5">
+      <section className=" mt-14 px-12">
         <div
-          className="
-            prose
-            prose-lg
-            max-w-none
-            prose-headings:font-bold
-            prose-headings:text-foreground
-            prose-p:text-muted-foreground
-            prose-p:leading-8
-            prose-img:rounded-xl
-            prose-a:text-primary
-            prose-blockquote:border-primary
-            dark:prose-invert
-          "
+
           dangerouslySetInnerHTML={{
             __html: data.description,
           }}
