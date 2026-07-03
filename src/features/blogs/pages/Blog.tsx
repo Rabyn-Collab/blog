@@ -72,9 +72,18 @@ export default function Blog() {
       </section>
 
       {/* Content */}
-      <section className=" mt-14 px-12">
+      <section className="px-5">
         <div
-
+          className="ql-editor  prose prose-sm sm:prose-base lg:prose-lg max-w-none
+      prose-headings:font-bold
+      prose-headings:tracking-tight
+      prose-p:text-muted-foreground
+      prose-p:leading-8
+      prose-img:rounded-xl
+      prose-img:shadow-lg
+      prose-pre:overflow-x-auto
+      prose-table:block
+      prose-table:overflow-x-auto"
           dangerouslySetInnerHTML={{
             __html: data.description,
           }}
